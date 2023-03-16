@@ -1,0 +1,47 @@
+<%= form_with(model: loaned_book) do |form| %>
+  <% if loaned_book.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(loaned_book.errors.count, "error") %> prohibited this loaned_book from being saved:</h2>
+
+      <ul>
+        <% loaned_book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :book_id, style: "display: block" %>
+    <%= form.number_field :book_id %>
+  </div>
+
+  <div>
+    <%= form.label :loaned_date, style: "display: block" %>
+    <%= form.datetime_field :loaned_date %>
+  </div>
+
+  <div>
+    <%= form.label :due_date, style: "display: block" %>
+    <%= form.datetime_field :due_date %>
+  </div>
+
+  <div>
+    <%= form.label :returned_date, style: "display: block" %>
+    <%= form.datetime_field :returned_date %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

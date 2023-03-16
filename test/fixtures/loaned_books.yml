@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  book_id: 1
+  loaned_date: 2023-02-28 17:09:37
+  due_date: 2023-02-28 17:09:37
+  returned_date: 2023-02-28 17:09:37
+  status: MyString
+
+two:
+  user_id: 1
+  book_id: 1
+  loaned_date: 2023-02-28 17:09:37
+  due_date: 2023-02-28 17:09:37
+  returned_date: 2023-02-28 17:09:37
+  status: MyString

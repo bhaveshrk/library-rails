@@ -1,0 +1,10 @@
+  <tbody>
+  <% @books.each do |book| %>
+  <tr>
+  
+    <td><%= book.title %></td>
+    <td><%= book.author.name %></td>
+    <td><%= link_to "Loan Book", your_loaned_book_loaned_books_path(book: book.id) , class: "btn btn-outline-success btn-sm" %></td>
+  </tr>
+  <% end %>
+  </tbody>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div>
+  <%= link_to "Edit this loaned book", edit_loaned_book_path(@loaned_book) %> |
+  <%= link_to "Back to loaned books", loaned_books_path %>
+
+  <%= button_to "Destroy this loaned book", @loaned_book, method: :delete %>
+</div>

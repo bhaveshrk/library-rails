@@ -1,0 +1,43 @@
+<div class="container py-0 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+      <h2 class="mb-3 fst-italic">Sign up</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="form-outline mb-4">
+          <div class="col-8">
+            <%= f.label :email , "Email:", :class=> 'form-label fw-bold font-monospace' %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=> 'form-control form-control-lg' %>
+          </div>
+        </div>
+
+        <div class="form-outline mb-4">
+          <div class="col-8">
+            <%= f.label :password , "Password:", :class=> 'form-label fw-bold font-monospace' %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password", :class=> 'form-control form-control-lg' %>
+          </div>
+        </div>
+
+        <div class="form-outline mb-4">
+          <div class="col-8">
+            <%= f.label :password_confirmation , "Confirm Password:", :class=> 'form-label fw-bold font-monospace'%><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", :class=> 'form-control form-control-lg' %>
+          </div>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "btn btn-outline-primary btn-block" %>
+          <%- if controller_name != 'sessions' %>
+            <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-outline-success btn-block"%><br />
+          <% end %>
+        </div>
+      <% end %> 
+    </div>
+  </div>
+</div>

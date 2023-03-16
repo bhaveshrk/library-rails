@@ -1,0 +1,35 @@
+  <%= render 'layouts/dash'%>
+  <p>
+    <strong>Book:</strong>
+    <%= @book.title %>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%= @book.author.name %>
+  </p>
+
+  <p>
+    <strong>Loaned date:</strong>
+    <%= @loaned_books.loaned_date %>
+  </p>
+
+  <p>
+    <strong>Due date:</strong>
+    <%= @loaned_books.due_date %>
+  </p>
+
+  <p>
+    <strong>Returned date:</strong>
+    <%= @loaned_books.returned_date %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= @loaned_books.status %>
+  </p>
+  <p>
+    <%= link_to "Loan Books", loaned_books_path %>
+  </p>
+
+</div>

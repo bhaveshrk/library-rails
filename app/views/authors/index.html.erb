@@ -1,0 +1,22 @@
+<%= render 'layouts/dash'%>
+<p style="color: green"><%= notice %></p>
+
+
+<h1>Authors</h1>
+
+<table class="table table-striped table-bordered table-hover ">
+
+  <thead>
+    <tr>
+      <th>Author Name</th>
+    </tr>
+  </thead>
+
+  <div id="authors">
+    <% @authors.each do |author| %>
+      <%= render author %>
+    <% end %>
+  </div>
+</table>
+
+<%= link_to "New author", new_author_path %>
